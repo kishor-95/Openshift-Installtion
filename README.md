@@ -264,7 +264,7 @@ frontend api-server
 backend api-server-backend
   balance     roundrobin
   option      ssl-hello-chk
-  # server bootstrap 192.168.65.9:6443 check fall 2 rise 3 backup   # Remove after bootstrap complete
+  server bootstrap 192.168.65.9:6443 check fall 2 rise 3 backup   # Remove after bootstrap complete
   server cp-1   192.168.65.10:6443 check fall 2 rise 3
   server cp-2   192.168.65.11:6443 check fall 2 rise 3
   server cp-3   192.168.65.12:6443 check fall 2 rise 3
@@ -278,7 +278,7 @@ frontend mcs
 
 backend mcs-backend
   balance roundrobin
-  # server bootstrap 192.168.65.9:22623 check backup                # Remove after bootstrap complete
+  server bootstrap 192.168.65.9:22623 check backup                # Remove after bootstrap complete
   server cp-1   192.168.65.10:22623 check
   server cp-2   192.168.65.11:22623 check
   server cp-3   192.168.65.12:22623 check
